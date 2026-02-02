@@ -1,0 +1,17 @@
+.vscode/
+
+# build
+build/
+out/
+bin/
+*.exe
+*.o
+*.obj
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Raylib specific (optional)
+*.ilk
+*.pdb
