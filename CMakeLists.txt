@@ -1,15 +1,13 @@
 cmake_minimum_required(VERSION 3.21)
 
 project(monster_hero_proto
-    LANGUAGES C CXX
+    LANGUAGES  CXX
 )
 
 if (WIN32 AND NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
     message(FATAL_ERROR "This project must be built as 64-bit (x64).")
 endif()
 
-set(CMAKE_C_STANDARD 17)
-set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -37,7 +35,7 @@ target_link_libraries(raylib INTERFACE
 )
 
 file(GLOB_RECURSE GAME_SOURCES
-    src/*.c
+    src/*.cpp
 )
 
 add_executable(game
